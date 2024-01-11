@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Risque';
+    src: url('../fonts/Risque-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.ris{
+    font-family: 'Risque', sans-serif;
+}
