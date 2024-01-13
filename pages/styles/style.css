@@ -558,6 +558,9 @@ textarea{
     .first-block .title {
         padding-top: 70px
     }
+    .photo-ded .ded img{
+        width: 500px;
+    }
     .third-block form{
         display: flex;
         flex-direction: column;
