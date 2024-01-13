@@ -4,9 +4,90 @@ body{
     margin: 0;
     background-color: #141429;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden!important;
 }
 /* Header styles */
+/* hover controls */
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-53 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    color: red;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    /*-webkit-mask-image: -webkit-radial-gradient(#000, #fff);*/
+    padding: 0;
+}
+
+.btn-53:disabled {
+    cursor: default;
+}
+
+.btn-53:-moz-focusring {
+    outline: auto;
+}
+
+.btn-53 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+    display: none;
+}
+
+.btn-53 {
+    background-color: transparent!important;
+    box-sizing: border-box;
+    display: block;
+    /*font-weight: 900;*/
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-53 .original {
+    color: white;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* end hover controls*/
 header{
     position: relative;
     z-index:999;
@@ -21,15 +102,17 @@ header{
 .inner-container{
     display: flex;
     gap: 139px;
+    width: 50vw;
 }
 .controls{
+    float: left;
     align-items: center;
     display: flex;
     gap: 38px;
 }
 .controls a {
     color: #FFF;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -41,11 +124,10 @@ header{
 }
 .hamburger {
     cursor: pointer;
-    position: relative;
-    -webkit-box-shadow: 13px 13px 2px -6px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 13px 13px 2px -6px rgba(34, 60, 80, 0.2);
+    position: absolute;
+    right: 38px;
+    top: 20px;
     box-shadow: 9px 9px 2px -6px rgb(16,16,33);
-    margin-right: 38px;
     border-radius: 50% 0 50% 50%;
     background-color: rgb(208,43,43);
     width: 60px;
@@ -53,45 +135,109 @@ header{
     transition-duration: .5s;
 }
 
-.hamburger ul {
-    text-align: center;
-    color: #FFF;
-    font-family: Risque, serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    margin-left: -66px;
-    margin-top: 34px;
-    list-style: none;
-    display: none;
-    /*transform: scale(1/35); !* обратное преобразование *!*/
-    transform-origin: top;
-}
-.hamburger ul li{
-    font-size: 3px;
-}
-
 .open {
-    transform: scale(35);
     transform-origin: center;
+    width: 1415px;
+    height: 1415px;
+    border-radius: 50%;
+    transform: translate(677.5px, -677.5px);
 }
 
-.hamburger.open svg {
+#checkbox {
     display: none;
 }
 
-.hamburger.open ul {
-    display: block;
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+}
+
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+
+#checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+#toggle{
+    margin: -20px;
+    position: absolute;
+    top: 50% !important;
+    right: 50% !important;
 }
 
 /* end Header Styles */
 
 /* first page styles */
+.cloud{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 80px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.show {
+    position: absolute;
+    scale: 1.4;
+    bottom: 10px;
+    left: -260px;
+    transform-origin: center;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Начальный угол вращения */
+    }
+    to {
+        transform: rotate(360deg); /* Конечный угол вращения (бесконечное вращение) */
+    }
+}
+
 .title{
     padding-top: 200px;
-    padding-left: 250px;
+    padding-left: 10%;
+    flex-wrap: wrap;
 
     color: #FFF;
     font-family: Risque, serif;
@@ -160,11 +306,28 @@ main{
 .second-block .title {
     display: flex;
     justify-content: space-around;
-    padding-top: 338px;
+    /*padding-top: 338px;*/
 }
 .inner-column{
     padding-left: 50px;
 }
+.btn{
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #3498db;
+}
+
 /*.inner-column p:nth-child(1){*/
 /*    color: #FFF;*/
 /*    font-size: 42px;*/
@@ -200,10 +363,7 @@ main{
     border: 3px solid #FFF;
     background: rgba(254, 250, 250, 0.00);
 }
-.right-column img{
-    width: 148px;
-    height: 256px;
-}
+
 .presents{
     display: flex;
     gap: 30px;
@@ -217,9 +377,13 @@ main{
 
 }
 .presents .item{
+    position: relative;
+    /*z-index: 999;*/
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
     background-color: #fff;
 
@@ -227,6 +391,11 @@ main{
     height: 149.785px;
     border-radius: 50%;
     border: 5px solid white;
+
+    transition-duration: .5s;
+}
+.presents .item:hover{
+    scale: 1.1;
 }
 
 /* third block */
@@ -238,6 +407,8 @@ main{
     background-repeat: no-repeat;
 }
 .third-block form {
+    position: relative;
+    z-index: 999;
     padding-left: 250px;
 
     width: 444px;
@@ -273,14 +444,12 @@ textarea{
     color: white;
     cursor: pointer;
 }
-
 .material-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
-
 .checkmark {
     position: relative;
     display: inline-block;
@@ -291,12 +460,10 @@ textarea{
     border-radius: 4px;
     transition: all 0.3s;
 }
-
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
     background-color: white;
     border-color: red;
 }
-
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
     content: "";
     position: absolute;
@@ -308,22 +475,52 @@ textarea{
     border-width: 0 4px 4px 0;
     transform: rotate(45deg);
 }
-
-/*.material-checkbox input[type="checkbox"]:focus ~ .checkmark {*/
-/*    box-shadow: 0 0 0 2px #dfec5065;*/
-/*}*/
-
-/*.material-checkbox:hover input[type="checkbox"] ~ .checkmark {*/
-/*    border-color: #C3CF34;*/
-/*}*/
-
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
     border-color: #4d4d4d;
 }
-
 /* end checkbox styles */
+
+/* adaptive for tablet */
+@media screen and (max-width: 1415px) {
+    body{
+        overflow-y: visible!important;
+    }
+
+    .second-block .title{
+        padding-top: 90px!important;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .second-block .title .left-column h1{
+        font-size: 52px;
+    }
+    .second-block .title .right-column {
+        border: none;
+        flex-direction: column-reverse;
+        padding-top: 60px;
+    }
+    .presents{
+        justify-content: space-around;
+    }
+    .photo-ded{
+        height: auto;
+    }
+}
+/* end adaptive for tablet */
+
+/* other adaptive */
+
+/* end other adaptive*/
+
+/* adaptive for phone */
+@media screen and (max-width: 898px){
+    .controls{
+        display: none;
+    }
+}
+/* end adaptive for phone */
