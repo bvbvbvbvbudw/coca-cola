@@ -123,8 +123,10 @@ header{
     padding-left: 49px;
 }
 .hamburger {
+    margin-top: 25px;
     cursor: pointer;
     position: absolute;
+    /*z-index: 3232000;*/
     right: 38px;
     top: 20px;
     box-shadow: 9px 9px 2px -6px rgb(16,16,33);
@@ -211,7 +213,7 @@ header{
 /* first page styles */
 .cloud{
     display: flex;
-    margin-top: 150px;
+    margin-bottom: -370px;
     margin-left: 80px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -268,19 +270,23 @@ header{
 
 
 .photo-ded {
+    position: relative;
+
+    display: flex;
+
+    width: 100vw;
+    height: 420px;
+    float: right;
+}
+.photo-ded .ded{
+    display: flex;
+    flex-direction: column-reverse;
+
     position: absolute;
     bottom: 0;
     right: 0;
-    background-image: url("../images/img/img.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    width: 883px;
-    height: 581px;
-    flex-shrink: 0;
 }
-main{
 
-}
 .first-block{
     padding:0;
     margin: 0;
@@ -313,7 +319,7 @@ main{
 }
 .btn{
     position: relative;
-    z-index: 999;
+    /*z-index: 999;*/
     cursor: pointer;
     background-color: #3498db;
     color: #fff;
@@ -491,36 +497,92 @@ textarea{
     }
 
     .second-block .title{
+        width: 80%;
+        margin: 0 auto;
         padding-top: 90px!important;
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
         padding-left: 0;
     }
     .second-block .title .left-column h1{
-        font-size: 52px;
+        font-size: 35px;
     }
     .second-block .title .right-column {
         border: none;
         flex-direction: column-reverse;
-        padding-top: 60px;
+        /*padding-top: 60px;*/
     }
     .presents{
         justify-content: space-around;
     }
-    .photo-ded{
+    .presents .item{
+        width: 111px;
+        height: 111px;
+    }
+    .presents .item img{
+        width: 60px;
         height: auto;
     }
+    #presentImage{
+        width: 100px;
+        height: auto;
+    }
+
+
 }
 /* end adaptive for tablet */
 
 /* other adaptive */
 
 /* end other adaptive*/
-
+@media screen and (max-width: 1000px){
+    .photo-ded .ded img{
+        width: 700px;
+        height: auto;
+        margin-left: 10%;
+    }
+    .left-column{
+        width: 60%;
+    }
+}
 /* adaptive for phone */
 @media screen and (max-width: 898px){
+    .presents{
+        width: 100vw;
+    }
+    .logo img{
+        width: 198px;
+        height: 65px;
+    }
+    .logo{
+        padding: 0;
+    }
+    .hamburger{
+        margin: 0;
+    }
+    .container-header{
+        padding-top: 18px;
+    }
     .controls{
         display: none;
+    }
+    .cloud{
+        opacity: 0!important;
+    }
+    .first-block .title h1, .second-block .title h1{
+        font-size: 52px;
+    }
+    .first-block .title h4, .second-block .title h4{
+        font-size: 28px;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .photo-ded{
+        height: 492px;
     }
 }
 /* end adaptive for phone */
