@@ -488,6 +488,9 @@ textarea{
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
     border-color: #4d4d4d;
 }
+.first-block, .second-block, .third-block{
+    overflow: hidden!important;
+}
 /* end checkbox styles */
 
 /* adaptive for tablet */
