@@ -551,6 +551,9 @@ textarea{
 }
 /* adaptive for phone */
 @media screen and (max-width: 898px){
+    .first-block .title {
+        padding-top: 70px
+    }
     .third-block form{
         display: flex;
         flex-direction: column;
