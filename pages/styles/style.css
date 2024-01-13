@@ -270,13 +270,14 @@ header{
 
 
 .photo-ded {
-    position: relative;
+    position: absolute;
+    bottom: 0;
 
     display: flex;
 
     width: 100vw;
     height: 420px;
-    float: right;
+    /*float: right;*/
 }
 .photo-ded .ded{
     display: flex;
@@ -606,7 +607,7 @@ textarea{
         margin: 0 auto;
     }
     .photo-ded{
-        height: 615px;
+        height: 492px;
     }
 }
 /* end adaptive for phone */
