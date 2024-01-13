@@ -271,7 +271,7 @@ header{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-image: url("../../images/img/img.png");
+    background-image: url("pages/images/img/img.png");
     background-size: auto;
     background-repeat: no-repeat;
     width: 883px;
@@ -299,7 +299,7 @@ main{
 .second-block{
     width: 100vw;
     height: 100vh;
-    background-image: url('../../images/bg/15321 1.png');
+    background-image: url('pages/images/bg/15321 1.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -402,7 +402,7 @@ main{
 .third-block{
     width: 100vw;
     height: 100vh;
-    background-image: url('../../images/bg/merry-christmas-xmas-night-christmas-reindeer-artwork-happy-new-year 1.png');
+    background-image: url('pages/images/bg/merry-christmas-xmas-night-christmas-reindeer-artwork-happy-new-year 1.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
