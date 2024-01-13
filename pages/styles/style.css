@@ -499,7 +499,7 @@ textarea{
     .second-block .title{
         width: 80%;
         margin: 0 auto;
-        padding-top: 90px!important;
+        padding-top: 90px;
         flex-direction: column;
         /*align-items: center;*/
         padding-left: 0;
@@ -510,10 +510,13 @@ textarea{
     .second-block .title .right-column {
         border: none;
         flex-direction: column-reverse;
-        /*padding-top: 60px;*/
+        padding-top: 40px;
+        margin: 0 auto;
+        width: 300px;
     }
     .presents{
-        justify-content: space-around;
+        justify-content: space-evenly;
+        margin-left: -62px;
     }
     .presents .item{
         width: 111px;
@@ -536,6 +539,7 @@ textarea{
 
 /* end other adaptive*/
 @media screen and (max-width: 1000px){
+
     .photo-ded .ded img{
         width: 700px;
         height: auto;
@@ -547,6 +551,20 @@ textarea{
 }
 /* adaptive for phone */
 @media screen and (max-width: 898px){
+    .third-block form{
+        display: flex;
+        flex-direction: column;
+        padding:0;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .second-block .title{
+        padding-top: 13px;
+
+    }
+    .inner-column{
+        width: 60%;
+    }
     .presents{
         width: 100vw;
     }
@@ -569,10 +587,10 @@ textarea{
     .cloud{
         opacity: 0!important;
     }
-    .first-block .title h1, .second-block .title h1{
+    .first-block .title h1, .second-block .title h1, .third-block .title h1{
         font-size: 52px;
     }
-    .first-block .title h4, .second-block .title h4{
+    .first-block .title h4, .second-block .title h4 , .third-block .title h4{
         font-size: 28px;
     }
 
