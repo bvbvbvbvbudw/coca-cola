@@ -310,7 +310,10 @@ header{
     /*display: flex;*/
     /*justify-content: space-around;*/
 }
-
+.first-block .title{
+    position: relative;
+    z-index: 9999;
+}
 
 /* second block */
 .second-block{
