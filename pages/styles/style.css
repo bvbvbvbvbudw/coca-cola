@@ -5,6 +5,9 @@ body{
     /*width: 100vw;*/
     overflow: hidden!important;
 }
+main{
+    overflow: hidden!important;
+}
 /* Header styles */
 /* hover controls */
 .btn-53,
@@ -228,10 +231,10 @@ header{
 
 @keyframes spin {
     from {
-        transform: rotate(0deg); /* Начальный угол вращения */
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg); /* Конечный угол вращения (бесконечное вращение) */
+        transform: rotate(360deg);
     }
 }
 
@@ -516,7 +519,7 @@ textarea{
     .second-block .title .right-column {
         border: none;
         flex-direction: column-reverse;
-        padding-top: 40px;
+        padding-top: 68px;
         margin: 0 auto;
         width: 300px;
     }
@@ -552,7 +555,10 @@ textarea{
         margin-left: 10%;
     }
     .left-column{
-        width: 60%;
+        width: 100%;
+    }
+    .third-block .title{
+        padding-top: 90px;
     }
 }
 /* adaptive for phone */
@@ -575,7 +581,7 @@ textarea{
 
     }
     .inner-column{
-        width: 60%;
+        width: 90%;
     }
     .presents{
         width: 100vw;
