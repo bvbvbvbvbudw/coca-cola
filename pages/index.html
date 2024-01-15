@@ -87,6 +87,28 @@
     </div>
 </header>
 <main id="fullpage">
+    <div class="test" style="position: absolute; top: 50%; left: 50%; font-size: 50px; color: white; background-color:yellow;">
+        <p  id="width"></p>
+        <p  id="height"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const w = document.getElementById('width');
+            const h = document.getElementById('height');
+
+            w.innerText = 'width inner: ' + window.innerWidth + ', width outer: ' + window.outerWidth;
+            h.innerText = "height inner: " + window.innerHeight + ',height outer' +  window.outerHeight;
+
+            window.addEventListener('resize',function (){
+                const w = document.getElementById('width');
+                const h = document.getElementById('height');
+
+                w.innerText = 'width inner: ' + window.innerWidth + ', width outer: ' + window.outerWidth;
+                h.innerText = "height inner: " + window.innerHeight + ',height outer' +  window.outerHeight;
+            })
+        })
+    </script>
     <div id="section-1" class="first-block">
         <img class="show" src="images/img/222526_1383765926%202%20(1).png" alt="">
         <div class="stars">
