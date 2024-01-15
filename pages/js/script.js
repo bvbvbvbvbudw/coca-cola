@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function(){
         cloudElement.style.opacity = '1';
     }, 3000);
 
-    document.addEventListener('DOMContentLoaded', function () {
-        let h = window.outerHeight;
-        let w = window.innerWidth;
-        let s_one = document.getElementById('section-1');
-        // if(w <= 1415){
-        if(h <= 620){
-            s_one.style.height = '620px';
-        } else s_one.style.height = h + 'px';
-        // } else s_one.style.height = '100vh';
-    })
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     let h = window.outerHeight;
+    //     let w = window.innerWidth;
+    //     let s_one = document.getElementById('section-1');
+    //     // if(w <= 1415){
+    //     if(h <= 620){
+    //         s_one.style.height = '620px';
+    //     } else s_one.style.height = h + 'px';
+    //     // } else s_one.style.height = '100vh';
+    // })
 })
