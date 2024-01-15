@@ -379,6 +379,7 @@ header{
 .presents{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 .sock img{
     width: 69px;
@@ -522,7 +523,7 @@ textarea{
     }
     .second-block .title .right-column {
         border: none;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse;.
         padding-top: 20px;
         margin: 0 auto;
         width: 300px;
@@ -553,6 +554,12 @@ textarea{
 
 /* other adaptive */
 @media screen and (max-width: 1000px){
+    .fp-section, .fp-tableCell{
+        height:auto!important;
+    }
+    .first-block, .second-block, .third-block{
+        height: auto!important;
+    }
     .right-column{
         font-size: 20px;
     }
@@ -576,7 +583,7 @@ textarea{
 @media screen and (max-width: 898px){
     .presents .item{
         width: 85px;
-        height: 76px;
+        height: 85px;
     }
     .presents .item img{
         width: 45px;
@@ -592,7 +599,7 @@ textarea{
     .third-block form{
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding: 0 0 100px;
         margin: 0 auto;
         width: 87%;
     }
