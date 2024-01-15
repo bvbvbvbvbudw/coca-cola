@@ -227,6 +227,7 @@ header{
     left: -260px;
     transform-origin: center;
     animation: spin 20s linear infinite;
+    z-index: 998;
 }
 
 @keyframes spin {
@@ -239,6 +240,9 @@ header{
 }
 
 .title{
+    position: relative;
+    z-index: 999;
+
     padding-top: 200px;
     padding-left: 10%;
     flex-wrap: wrap;
@@ -421,7 +425,7 @@ header{
 }
 .third-block form {
     position: relative;
-    z-index: 999;
+    /*z-index: 999;*/
     padding-left: 250px;
 
     width: 444px;
@@ -557,7 +561,10 @@ textarea{
     .fp-section, .fp-tableCell{
         height:auto!important;
     }
-    .first-block, .second-block, .third-block{
+    .first-block{
+        height: 127vh!important;
+    }
+    .second-block, .third-block{
         height: auto!important;
     }
     .right-column{
@@ -577,10 +584,19 @@ textarea{
         padding: 0 0 0 20px;
     }
 }
+
+@media screen and (max-width: 380px){
+    .ded img{
+        width: 306px!important;
+    }
+}
 /* end other adaptive*/
 
 /* adaptive for phone */
 @media screen and (max-width: 898px){
+    .inner-column{
+        padding:0;
+    }
     .presents .item{
         width: 85px;
         height: 85px;
@@ -618,7 +634,7 @@ textarea{
         height: 65px;
     }
     .logo{
-        padding: 0;
+        padding-left: 9px;
     }
     .hamburger{
         margin: 0;
