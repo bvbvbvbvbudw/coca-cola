@@ -557,12 +557,17 @@ textarea{
 /* end adaptive for tablet */
 
 /* other adaptive */
+@media screen and (max-width: 1300px){
+    .cloud{
+        opacity: 0!important;
+    }
+}
 @media screen and (max-width: 1000px){
     .fp-section, .fp-tableCell{
         height:auto!important;
     }
     .first-block{
-        height: 127vh!important;
+        height: 650px!important;
     }
     .second-block, .third-block{
         height: auto!important;
