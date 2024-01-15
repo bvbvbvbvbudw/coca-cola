@@ -553,6 +553,9 @@ textarea{
 
 /* other adaptive */
 @media screen and (max-width: 1000px){
+    .right-column{
+        font-size: 20px;
+    }
 
 
     .photo-ded .ded img{
