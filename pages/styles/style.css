@@ -529,14 +529,14 @@ textarea{
     }
     .presents{
         justify-content: space-evenly;
-        margin-left: -62px;
+        margin: 0 auto;
     }
     .presents .item{
-        width: 111px;
-        height: 111px;
+        width: 75px;
+        height: 75px;
     }
     .presents .item img{
-        width: 60px;
+        width: 45px;
         height: auto;
     }
     #presentImage{
@@ -563,6 +563,7 @@ textarea{
     }
     .third-block .title{
         padding-top: 90px;
+
     }
 }
 /* adaptive for phone */
@@ -587,9 +588,9 @@ textarea{
     .inner-column{
         width: 90%;
     }
-    .presents{
-        width: 100vw;
-    }
+    /*.presents{*/
+    /*    width: 100vw;*/
+    /*}*/
     .logo img{
         width: 198px;
         height: 65px;
