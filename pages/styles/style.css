@@ -497,6 +497,10 @@ textarea{
 .first-block, .second-block, .third-block{
     overflow: hidden!important;
 }
+
+.fp-section, .fp-tableCell{
+    height: 100vh!important;
+}
 /* end checkbox styles */
 
 /* adaptive for tablet */
