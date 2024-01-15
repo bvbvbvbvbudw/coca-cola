@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('toggle').addEventListener('click', function(){
         document.getElementById('hamburger').classList.toggle('open');
     });
-
     const stars = document.querySelectorAll('.stars svg');
     const starsArray = Array.from(stars).slice(1, 18);
     function randomGlowStar() {
@@ -33,10 +32,19 @@ document.addEventListener('DOMContentLoaded', function(){
     setInterval(() => {
         randomGlowStar();
     }, 1000);
-
     setTimeout(function () {
-        // Показываем элемент плавно
         var cloudElement = document.querySelector('.cloud');
         cloudElement.style.opacity = '1';
     }, 3000);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let h = window.outerHeight;
+        let w = window.innerWidth;
+        let s_one = document.getElementById('section-1');
+        // if(w <= 1415){
+        if(h <= 620){
+            s_one.style.height = '620px';
+        } else s_one.style.height = h + 'px';
+        // } else s_one.style.height = '100vh';
+    })
 })
