@@ -523,7 +523,7 @@ textarea{
     .second-block .title .right-column {
         border: none;
         flex-direction: column-reverse;
-        padding-top: 68px;
+        padding-top: 20px;
         margin: 0 auto;
         width: 300px;
     }
