@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('toggle').addEventListener('click', function(){
         document.getElementById('hamburger').classList.toggle('open');
+        document.getElementById('list').classList.toggle('open-list')
     });
     const stars = document.querySelectorAll('.stars svg');
     const starsArray = Array.from(stars).slice(1, 18);

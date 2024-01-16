@@ -146,7 +146,27 @@ header{
     border-radius: 50%;
     transform: translate(677.5px, -677.5px);
 }
+#list{
+    display: none;
+    position: relative;
+    top: 53%;
+    left: 27%;
+    list-style: none;
+    color: #FFF;
 
+    font-family: Risque, serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#list li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.open-list{
+    display: block!important;
+}
 #checkbox {
     display: none;
 }
@@ -227,7 +247,7 @@ header{
     left: -260px;
     transform-origin: center;
     animation: spin 20s linear infinite;
-    z-index: 998;
+    /*z-index: 998;*/
 }
 
 @keyframes spin {
@@ -243,7 +263,7 @@ header{
     /*position: relative;*/
     /*z-index: 999;*/
 
-    padding-top: 200px;
+    margin-top: 250px;
     padding-left: 10%;
     flex-wrap: wrap;
 
@@ -310,10 +330,10 @@ header{
     /*display: flex;*/
     /*justify-content: space-around;*/
 }
-.first-block .title{
-    position: relative;
-    z-index: 9999;
-}
+/*.first-block .title{*/
+/*    position: relative;*/
+/*    z-index: 9999;*/
+/*}*/
 
 /* second block */
 .second-block{
