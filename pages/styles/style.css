@@ -1,13 +1,14 @@
 /* Background */
-body{
+body {
     padding: 0;
     margin: 0;
-    /*width: 100vw;*/
     overflow: hidden!important;
 }
-main{
+
+main {
     overflow: hidden!important;
 }
+
 /* Header styles */
 /* hover controls */
 .btn-53,
@@ -31,7 +32,6 @@ main{
     font-size: 100%;
     line-height: 1.5;
     margin: 0;
-    /*-webkit-mask-image: -webkit-radial-gradient(#000, #fff);*/
     padding: 0;
 }
 
@@ -56,7 +56,6 @@ main{
     background-color: transparent!important;
     box-sizing: border-box;
     display: block;
-    /*font-weight: 900;*/
     overflow: hidden;
     position: relative;
 }
@@ -83,35 +82,39 @@ main{
     transform: translateY(-15px);
     transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
 }
+
 .btn-53:hover span {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-/* end hover controls*/
-header{
+/* end hover controls */
+header {
     position: relative;
     z-index:999;
 }
-.container-header{
+
+.container-header {
     padding-top: 43px;
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-between;;
+    justify-content: space-between;
 }
-.inner-container{
+
+.inner-container {
     display: flex;
     gap: 139px;
     width: 50vw;
 }
-.controls{
+
+.controls {
     float: left;
     align-items: center;
     display: flex;
     gap: 38px;
 }
+
 .controls a {
     color: #FFF;
     font-family: Roboto, serif;
@@ -121,19 +124,20 @@ header{
     line-height: normal;
     text-decoration: none;
 }
-.logo{
+
+.logo {
     padding-left: 49px;
 }
+
 .hamburger {
     margin-top: 25px;
     cursor: pointer;
     position: absolute;
-    /*z-index: 3232000;*/
     right: 38px;
     top: 20px;
-    box-shadow: 9px 9px 2px -6px rgb(16,16,33);
+    box-shadow: 9px 9px 2px -6px rgb(16, 16, 33);
     border-radius: 50% 0 50% 50%;
-    background-color: rgb(208,43,43);
+    background-color: rgb(208, 43, 43);
     width: 60px;
     height: 60px;
     transition-duration: .5s;
@@ -146,27 +150,30 @@ header{
     border-radius: 50%;
     transform: translate(677.5px, -677.5px);
 }
-#list{
+
+#list {
     display: none;
     position: relative;
     top: 53%;
     left: 27%;
     list-style: none;
     color: #FFF;
-
     font-family: Risque, serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-#list li{
+
+#list li {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.open-list{
+
+.open-list {
     display: block!important;
 }
+
 #checkbox {
     display: none;
 }
@@ -194,7 +201,6 @@ header{
 #bar2 {
     transition-duration: .8s;
 }
-
 
 #checkbox:checked + .toggle .bars {
     position: absolute;
@@ -247,7 +253,6 @@ header{
     left: -260px;
     transform-origin: center;
     animation: spin 20s linear infinite;
-    /*z-index: 998;*/
 }
 
 @keyframes spin {
@@ -260,9 +265,6 @@ header{
 }
 
 .title{
-    /*position: relative;*/
-    /*z-index: 999;*/
-
     margin-top: 250px;
     padding-left: 10%;
     flex-wrap: wrap;
@@ -303,7 +305,6 @@ header{
 
     width: 100vw;
     height: 420px;
-    /*float: right;*/
 }
 .photo-ded .ded{
     display: flex;
@@ -313,28 +314,18 @@ header{
     bottom: 0;
     right: 0;
 }
-
 .first-block{
     padding:0;
     margin: 0;
 
     background-color: #141429;
 
-
     overflow: hidden;
     width: 100%;
     min-height: 800px;
     height: 100vh;
     position: relative;
-
-    /*display: flex;*/
-    /*justify-content: space-around;*/
 }
-/*.first-block .title{*/
-/*    position: relative;*/
-/*    z-index: 9999;*/
-/*}*/
-
 /* second block */
 .second-block{
     width: 100vw;
@@ -347,14 +338,12 @@ header{
 .second-block .title {
     display: flex;
     justify-content: space-around;
-    /*padding-top: 338px;*/
 }
 .inner-column{
     padding-left: 50px;
 }
 .btn{
     position: relative;
-    /*z-index: 999;*/
     cursor: pointer;
     background-color: #3498db;
     color: #fff;
@@ -363,27 +352,10 @@ header{
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
-
 .btn:hover {
     background-color: #fff;
     color: #3498db;
 }
-
-/*.inner-column p:nth-child(1){*/
-/*    color: #FFF;*/
-/*    font-size: 42px;*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    line-height: normal;*/
-/*}*/
-/*.inner-column p:nth-child(2){*/
-/*    color: #FFF;*/
-/*    font-family: Roboto, serif;*/
-/*    font-size: 28px;*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    line-height: normal;*/
-/*}*/
 .left-column{
     width: 716px;
 }
@@ -398,7 +370,6 @@ header{
     display: flex;
     align-items: center;
     width: 553px;
-    /*height: 405px;*/
     flex-shrink: 0;
     border-radius: 20px;
     border: 3px solid #FFF;
@@ -416,11 +387,9 @@ header{
 }
 .sock {
     background-color: transparent!important;
-
 }
 .presents .item{
     position: relative;
-    /*z-index: 999;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,7 +408,6 @@ header{
 .presents .item:hover{
     scale: 1.1;
 }
-
 /* third block */
 .third-block{
     width: 100vw;
@@ -451,7 +419,6 @@ header{
 }
 .third-block form {
     position: relative;
-    /*z-index: 999;*/
     padding-left: 250px;
 
     width: 444px;
@@ -529,13 +496,9 @@ textarea{
     overflow: hidden!important;
 }
 
-/*.fp-section, .fp-tableCell{*/
-/*    height: 100vh!important;*/
-/*}*/
 .photo-ded .ded img{
     width: 800px;
     height: auto;
-    /*margin-left: 10%;*/
 }
 .fp-section, .fp-tableCell{
     height:auto!important;
@@ -553,7 +516,6 @@ textarea{
         margin: 0 auto;
         padding-top: 15px;
         flex-direction: column;
-        /*align-items: center;*/
         padding-left: 0;
     }
     .second-block .title .left-column h1{
@@ -563,7 +525,6 @@ textarea{
         border: none;
         flex-direction: column-reverse;
         padding-top: 20px;
-        /*margin: 0 auto;*/
         width: 100%;
     }
     .presents{
@@ -668,9 +629,6 @@ textarea{
     .inner-column{
         width: 90%;
     }
-    /*.presents{*/
-    /*    width: 100vw;*/
-    /*}*/
     .logo img{
         width: 198px;
         height: 65px;
@@ -696,7 +654,6 @@ textarea{
     .first-block .title h4, .second-block .title h4 , .third-block .title h4{
         font-size: 28px;
     }
-
     .btn{
         display: flex;
         justify-content: center;
